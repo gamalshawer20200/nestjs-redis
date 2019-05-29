@@ -1,0 +1,14 @@
+<br><br>
+<h1>{{user.first_name}} {{user.last_name}} {{user.id}}</h1>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Email: </strong> {{user.email}}</li>
+    <li class="list-group-item"><strong>Phone: </strong> {{user.phone}}</li>
+</ul>
+
+<button style="margin-top:10px" type="button" class="btn btn-danger">
+    <a class="btn btn-default" href="/">Back</a>
+</button>
+
+<form method="POST" action="/user/delete/{{user.id}}?_method=DELETE"> {{!-- we can do that as we import method override package from npm --}}
+<button style="margin-top:20px" type="submit" class="btn btn-outline-danger">Delete</button>
+</form>
